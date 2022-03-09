@@ -22,6 +22,7 @@ website = BeautifulSoup(response.text, 'html.parser')
 products = website.findAll('div', attrs={'class': 'andes-card andes-card--flat andes-card--default ui-search-result'
                                                   ' ui-search-result--core andes-card--padding-default'})
 
+
 # Condition for character formatting
 for product in products:
     title = product.find('h2', attrs={'class': 'ui-search-item__title'})
@@ -91,27 +92,30 @@ for product in products:
         p1 = price_format[28:34]
         p2 = price_format[28:34]
 
-    # First step to the code printing
+# First step to the code printing
     link = product.find('a', attrs={'class': 'ui-search-link'})
 
-    # Arrays to manipulate
-    #for a_title in title:
-        #title_array = [a_title]
-        #print(title_array)
+
+# Arrays to manipulate
+
+
+    # for a_title in title:
+    # title_array = [a_title]
+    # print(title_array)
 
     # Arrays to manipulate
-    #for a_price in price:
-      #  price_array = [a_price.text]
-     #   print(price_array)
+    # for a_price in price:
+    #  price_array = [a_price.text]
+    #   print(price_array)
 
-    for a_link in link:
-         link_array = [a_link.text, link['href']]
-         print(link_array)
+    # for a_link in link:
+    # link_array = [a_link.text, link['href']]
+    # print(link_array)
 
 
-    # print('Data e horário da consulta: {} \n Título do produto: {} \n Preço do produto: R$ {} \n Link do produto: {} \n'
-    # .format(data_e_hora_em_texto, title.text, p2, link['href']))
+    print('Data e horário da consulta: {} \n Título do produto: {} \n Preço do produto: R$ {} \n Link do produto: {} \n'
+          .format(data_e_hora_em_texto, title.text, p2, link['href']))
 
     # Character counter
-    """t = len(price_format)"""
-    """ print(t)"""
+        #t = len(price_format)
+            #print(t)
