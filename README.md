@@ -24,7 +24,10 @@ Serão testadas duas línguagens: ``Python`` e ``JavaScript``. A escolha das lí
 A técnica utilizada se baseira no *scraping*, que consiste em coletadar dados bruto da internet e a tratativa desses dados.
 
 
->   [link](link.md) e *itálico*
+>   <!-- [link](link.md) e *itálico* -->
+<!-- <div align="center">
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=FelipeFarinha/Farinhoso&layout=compact&langs_count=7&theme=github_dark"/>
+</div> -->
 
 
 ✔️ - ``JavaSCript``
