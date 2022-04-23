@@ -29,52 +29,19 @@ A técnica utilizada se baseira no _scraping_, que consiste em coletadar dados b
   <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=FelipeFarinha/Farinhoso&layout=compact&langs_count=7&theme=github_dark"/>
 </div> -->
 
-✔️ - `JavaSCript`
-
-```js
-function userId({ id }) {
-  return id;
-}
-
-var user = {
-  id: 42,
-  displayName: "jdoe",
-};
-
-console.log(`userId: ${userId(user)} `); // "userId: 42"
-```
-
-✔️ - `Python`
-
-```js
-function userId({ id }) {
-  return id;
-}
-
-var user = {
-  id: 42,
-  displayName: "jdoe",
-};
-
-console.log(`userId: ${userId(user)} `); // "userId: 42"
-```
-
----
 
 ## Funcionalidades e Demonstração da Aplicação
 
-### Importe requests and bs4
-
-```Py
-import requests
-from bs4 import BeautifulSoup
-```
+### Importe: requests e bs4
 
 terminal:
 `pip install requests`
 `pip3 install beautifulsoup4`
 
-<br>
+```Py
+import requests
+from bs4 import BeautifulSoup
+```
 
 ## Licença
 
