@@ -1,4 +1,3 @@
-# Date and time structure
 import csv
 import requests
 from bs4 import BeautifulSoup
