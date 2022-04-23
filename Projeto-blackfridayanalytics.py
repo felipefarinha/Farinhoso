@@ -7,8 +7,6 @@ from datetime import datetime
 date_and_time = datetime.now()
 date_and_time_text = date_and_time.strftime('%d/%m/%Y | %H:%M')
 
-# Import of libraries
-
 # Request structure
 headers = {'Mozilla/5.0'}
 url_base = 'https://lista.mercadolivre.com.br/'
@@ -48,9 +46,7 @@ for product in products:
     #       '\n'.format(date_and_time_text, title, formated_price, link['href']))
 
     id += 1
-    # csv_writer.writerow([id, date_and_time_text, title, formated_price, link['href']] )
-    csv_writer.writerow(
-        [f'{id}, {formated_price}, {title}, {link["href"]}'])
+    csv_writer.writerow([f'{id}, {formated_price}, {title}, {link["href"]}'])
 
 csv_file.close()
 
