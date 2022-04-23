@@ -1,18 +1,3 @@
-# Blackfriday-Analytics
-
-Projeto beta em análise de dados de preços no Mercado Livre
-
-### Importe requests and bs4
-
-```Py
-import requests
-from bs4 import BeautifulSoup
-```
-
-terminal:
-`pip install requests`
-`pip3 install beautifulsoup4`
-
 ## Índice
 
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
@@ -22,6 +7,7 @@ terminal:
 - [Fontes de pesquisa](#fontes-de-pesquisa)
 
 ## Blackfriday-Analytics
+Projeto beta, em análise de dados de preços no Mercado Livre
 
 ### Objetivo
 
@@ -76,6 +62,17 @@ console.log(`userId: ${userId(user)} `); // "userId: 42"
 ---
 
 ## Funcionalidades e Demonstração da Aplicação
+
+### Importe requests and bs4
+
+```Py
+import requests
+from bs4 import BeautifulSoup
+```
+
+terminal:
+`pip install requests`
+`pip3 install beautifulsoup4`
 
 <br>
 
