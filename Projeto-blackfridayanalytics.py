@@ -12,22 +12,21 @@ date_and_time_text = date_and_time.strftime('%d/%m/%Y | %H:%M')
 # Request structure
 headers = {'Mozilla/5.0'}
 url_base = 'https://lista.mercadolivre.com.br/'
-product_name = input('Digite um produto para pesquisa de item')
+product_name = input('Informe um produto para pesquisa: ')
 response = requests.get(url_base + product_name, '_NoIndex_True')
 website = BeautifulSoup(response.text, 'html.parser')
 
 # Csv init
-csv_file = open('raspagem_de_dados.csv', 'w', newline='')
+csv_file = open('dados_da_pesquisa.csv', 'w', newline='')
 
 csv_writer = csv.writer(csv_file)
 
-csv_writer.writerow(
-    ['id', 'Data e hora da consulta', 'Título', 'Preço', 'Link'])
+csv_writer.writerow([f'Consulta: {date_and_time_text} '])
+csv_writer.writerow([f'id, Titulo, Preco, Link '])
 
 
 # Web Scrapping Initializing
 products = website.findAll('div', attrs={'class': 'ui-search-result__wrapper'})
-
 
 id = 0
 for product in products:
@@ -42,12 +41,17 @@ for product in products:
 
     index = price.find('R$')
 
-    #index_nums = print(index)
+    # index_nums = print(index)
     formated_price = price[index:]
 
-    print('\n Data e hora da consulta: {} \n Título do produto: {} \n Preço do produto: {} \n link do produto: {}'
-          '\n'.format(date_and_time_text, title, formated_price, link['href']))
-    csv_writer.writerow([id, date_and_time_text, title,
-                        formated_price, link['href']])
+    # print('\n Data e hora da consulta: {} \n Título do produto: {} \n Preço do produto: {} \n link do produto: {}'
+    #       '\n'.format(date_and_time_text, title, formated_price, link['href']))
+
     id += 1
+    # csv_writer.writerow([id, date_and_time_text, title, formated_price, link['href']] )
+    csv_writer.writerow(
+        [f'{id}, {formated_price}, {title}, {link["href"]}'])
+
 csv_file.close()
+
+print(f'Resultado coletado! Arquivo "dados_da_pesquisa.csv" gerado!')
